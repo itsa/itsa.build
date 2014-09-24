@@ -10,6 +10,7 @@
 */
 (function (window) {
     "use strict";
+
     /**
      * The ITSA class provides the core functionality for the ITSA library
      * and is the root namespace for all the additional modules.
