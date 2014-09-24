@@ -22,6 +22,7 @@
     ],
     "main": "itsa.build.js",
     "dependencies": {
+        "event":"itsa/event",
         "event-mobile":"itsa/event-mobile",
         "utils": "itsa/utils",
         "extend-js": "itsa/extend-js",
