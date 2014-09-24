@@ -24,10 +24,10 @@
     "dependencies": {
         "event-mobile":"itsa/event-mobile",
         "utils": "itsa/utils",
-        "extend-js": "itsa/extends-js",
+        "extend-js": "itsa/extend-js",
         "io": "itsa/io",
 		"node-win":"itsa/node-win",
-        "ypromise": "^0.2.3",
+        "ypromise": "^0.2.3"
     },
     "devDependencies": {
         "chai": "^1.9.1",
@@ -41,7 +41,7 @@
     "scripts": {
         "pretest": "jshint  ./*.js",
         "test": "mocha tests/*.js  && istanbul cover $(which _mocha) -- tests/*.js",
-        "lint": "jshint --config ../../.jshintrc ./*.js"
+        "lint": "jshint ./*.js"
     },
     "homepage": "http://itsa.github.io",
     "maintainers": [
