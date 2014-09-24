@@ -1,4 +1,1 @@
-itsa.build
-==========
-
-Aggregator for all the individual modules that the library uses
+For information, api and documentation about this module: visit <b><a href="http://itsa.io">itsa.io</a></b>
