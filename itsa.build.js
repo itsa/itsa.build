@@ -6,6 +6,10 @@
  * The modules themselves work quite well independent of this module and can be used
  * separately without the need of them being integrated under one globa namespace.
  *
+ *
+ * <i>Copyright (c) 2014 ITSA - https://github.com/itsa</i>
+ * New BSD License - http://choosealicense.com/licenses/bsd-3-clause/
+ *
  * @module ITSA
 */
 (function (window) {
