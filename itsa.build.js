@@ -119,8 +119,11 @@
      * @type Object
      * @static
     */
-    ITSA.IO = require('io')(window);
+    ITSA.IO = require('io/io-transfer.js')(window);
     ITSA.IO.config.merge(io_config);
+    require('io/io-cors-ie9.js')(window);
+    require('io/io-stream.js')(window);
+    require('io/io-xml.js')(window);
 
     /**
      * [Event](Event.html)-instance
