@@ -7,9 +7,6 @@ describe('Integration test, are they available where they should?', function () 
 	it('idGenerator', function () {
 		expect(ITSA.idGenerator('integration', 500)).be.equal('integration-500');
 	});
-	it('typeOf', function () {
-		expect(ITSA.typeOf([])).be.equal('array');
-	});
 	it('io', function () {
 		expect(ITSA.IO.request).be.a('function');
 	});
