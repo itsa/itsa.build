@@ -26,6 +26,7 @@
         "event-mobile":"itsa/event-mobile",
         "utils": "itsa/utils",
         "extend-js": "itsa/extend-js",
+        "polyfill": "itsa/polyfill",
         "io": "itsa/io",
 		"node-win":"itsa/node-win",
         "ypromise": "^0.2.3"
