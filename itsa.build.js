@@ -86,7 +86,12 @@
         debug: true,
         base: '/components'
     };
-     var fakedom = window.navigator.userAgent==='fake',
+
+    require('polyfill');
+    require('ypromise');
+    require('extend-js');
+
+    var fakedom = window.navigator.userAgent==='fake',
          Event = fakedom ? require('event') : require('event-mobile')(window),
          io_config = {
              reqTimeout: 3000,
@@ -97,8 +102,6 @@
 
     require('event/event-emitter.js');
     require('event/event-listener.js');
-    require('ypromise');
-    require('extend-js');
 
     /**
      * Reference to the `idGenerator` function in [utils](../modules/utils.html)
