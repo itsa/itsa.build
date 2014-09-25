@@ -13,6 +13,7 @@
  * @module ITSA
 */
 (function (window) {
+
     "use strict";
 
     /**
