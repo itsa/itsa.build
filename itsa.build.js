@@ -10,7 +10,8 @@
  * <i>Copyright (c) 2014 ITSA - https://github.com/itsa</i>
  * New BSD License - http://choosealicense.com/licenses/bsd-3-clause/
  *
- * @module ITSA
+ * @module itsa.build
+ *
 */
 (function (window) {
 
@@ -100,19 +101,13 @@
     require('extend-js');
 
     /**
-    Reference to the `idGenerator` function in [utils](../modules/utils.html)
-
-    @property idGenerator
-    @type function
-    @static
+     * Reference to the `idGenerator` function in [utils](../modules/utils.html)
+     *
+     * @property idGenerator
+     * @type function
+     * @static
     */
-    /**
-    Reference to the `typeOf` function in [utils](../modules/utils.html)
 
-    @property typeOf
-    @type function
-    @static
-    */
     ITSA.merge(require('utils'));
 
     /**
