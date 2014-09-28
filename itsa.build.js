@@ -86,7 +86,7 @@
 
     require('polyfill');
     require('ypromise');
-    require('extend-js');
+    require('js-ext');
 
     var fakedom = window.navigator.userAgent==='fake',
          Event = fakedom ? require('event') : require('event-mobile')(window),
