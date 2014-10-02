@@ -91,14 +91,11 @@
     var fakedom = window.navigator.userAgent==='fake',
          Event = fakedom ? require('event') : require('event-mobile')(window),
          io_config = {
-             reqTimeout: 3000,
+             // timeout: 3000,
              debug: true,
              base: '/build'
          },
          EVENT_NAME_TIMERS_EXECUTION = 'timers:asyncfunc';
-
-    require('event/event-emitter.js');
-    require('event/event-listener.js');
 
     /**
      * Reference to the `idGenerator` function in [utils](../modules/utils.html)
