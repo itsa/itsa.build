@@ -86,17 +86,24 @@
 
     require('polyfill');
     require('ypromise');
+    require('window-ext')(window);
+    require('dom-ext')(window);
     require('js-ext');
 
     var fakedom = window.navigator.userAgent==='fake',
-         Event = fakedom ? require('event') : require('event-mobile')(window),
-         io_config = {
-             // timeout: 3000,
-             debug: true,
-             base: '/build'
-         },
-         EVENT_NAME_TIMERS_EXECUTION = 'timers:asyncfunc';
+        Event = fakedom ? require('event') : require('event-mobile')(window),
+        io_config = {
+            // timeout: 3000,
+            debug: true,
+            base: '/build'
+        },
+        EVENT_NAME_TIMERS_EXECUTION = 'timers:asyncfunc';
 
+    if (!fakedom) {
+        require('event-dom/extra/hover.js')(window);
+        require('event-dom/extra/valuechange.js')(window);
+        require('event-dom/extra/drag.js')(window);
+    }
     /**
      * Reference to the `idGenerator` function in [utils](../modules/utils.html)
      *
@@ -106,6 +113,7 @@
     */
 
     ITSA.merge(require('utils'));
+    ITSA.RESERVED_WORDS = require('js-ext/extra/reserved-words.js');
 
     /**
      * Reference to the [IO](io.html) object
