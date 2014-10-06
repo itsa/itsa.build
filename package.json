@@ -1,6 +1,6 @@
 {
     "name": "itsa",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "ITSA's global aggregator",
     "author": [
         {
@@ -23,7 +23,10 @@
     "main": "itsa.build.js",
     "dependencies": {
         "polyfill": "itsa/polyfill",
+        "window-ext": "itsa/window-ext",
+        "dom-ext": "itsa/dom-ext",
         "event":"itsa/event",
+        "event-dom":"itsa/event-dom",
         "event-mobile":"itsa/event-mobile",
         "utils": "itsa/utils",
         "js-ext": "itsa/js-ext",
