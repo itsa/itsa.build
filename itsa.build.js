@@ -85,10 +85,9 @@
     };
 
     require('polyfill');
-    require('ypromise');
+    require('js-ext');
     require('window-ext')(window);
     require('dom-ext')(window);
-    require('js-ext');
 
     var fakedom = window.navigator.userAgent==='fake',
         Event = fakedom ? require('event') : require('event-mobile')(window),
@@ -102,7 +101,7 @@
     if (!fakedom) {
         require('event-dom/extra/hover.js')(window);
         require('event-dom/extra/valuechange.js')(window);
-        require('event-dom/extra/drag.js')(window);
+        require('event-dom/extra/dragdrop.js')(window);
     }
     /**
      * Reference to the `idGenerator` function in [utils](../modules/utils.html)

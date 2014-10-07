@@ -31,8 +31,7 @@
         "utils": "itsa/utils",
         "js-ext": "itsa/js-ext",
         "io": "itsa/io",
-		"node-win":"itsa/node-win",
-        "ypromise": "^0.2.3"
+		"node-win":"itsa/node-win"
     },
     "devDependencies": {
         "chai": "^1.9.1",
