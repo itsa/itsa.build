@@ -84,6 +84,7 @@
         base: '/components'
     };
 
+    require('css');
     require('polyfill');
     require('js-ext');
     require('window-ext')(window);

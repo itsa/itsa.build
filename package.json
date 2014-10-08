@@ -22,6 +22,7 @@
     ],
     "main": "itsa.build.js",
     "dependencies": {
+        "css": "itsa/css",
         "polyfill": "itsa/polyfill",
         "window-ext": "itsa/window-ext",
         "dom-ext": "itsa/dom-ext",
