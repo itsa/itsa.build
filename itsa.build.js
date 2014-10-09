@@ -88,7 +88,6 @@
     require('polyfill');
     require('js-ext');
     require('window-ext')(window);
-    require('dom-ext')(window);
 
     var fakedom = window.navigator.userAgent==='fake',
         Event = fakedom ? require('event') : require('event-mobile')(window),
@@ -99,11 +98,6 @@
         },
         EVENT_NAME_TIMERS_EXECUTION = 'timers:asyncfunc';
 
-    if (!fakedom) {
-        require('event-dom/extra/hover.js')(window);
-        require('event-dom/extra/valuechange.js')(window);
-        require('event-dom/extra/dragdrop.js')(window);
-    }
     /**
      * Reference to the `idGenerator` function in [utils](../modules/utils.html)
      *
@@ -112,8 +106,15 @@
      * @static
     */
 
+    ITSA.merge(require('dom-ext')(window));
     ITSA.merge(require('utils'));
     ITSA.RESERVED_WORDS = require('js-ext/extra/reserved-words.js');
+
+    if (!fakedom) {
+        require('event-dom/extra/hover.js')(window);
+        require('event-dom/extra/valuechange.js')(window);
+        ITSA.merge(require('drag-drop')(window));
+    }
 
     /**
      * Reference to the [IO](io.html) object
@@ -121,11 +122,11 @@
      * @type Object
      * @static
     */
-    ITSA.IO = require('io/io-transfer.js')(window);
+    ITSA.IO = require('io/extra/io-transfer.js')(window);
     ITSA.IO.config.merge(io_config);
-    require('io/io-cors-ie9.js')(window);
-    require('io/io-stream.js')(window);
-    require('io/io-xml.js')(window);
+    require('io/extra/io-cors-ie9.js')(window);
+    require('io/extra/io-stream.js')(window);
+    require('io/extra/io-xml.js')(window);
 
     /**
      * [Event](Event.html)-instance

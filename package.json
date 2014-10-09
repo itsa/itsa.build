@@ -29,6 +29,7 @@
         "event":"itsa/event",
         "event-dom":"itsa/event-dom",
         "event-mobile":"itsa/event-mobile",
+        "drag-drop":"itsa/drag-drop",
         "utils": "itsa/utils",
         "js-ext": "itsa/js-ext",
         "io": "itsa/io",
