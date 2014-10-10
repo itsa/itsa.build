@@ -84,6 +84,11 @@
         base: '/components'
     };
 
+    ITSA.Plugins = {
+
+    };
+
+
     require('css');
     require('polyfill');
     require('js-ext');
@@ -96,7 +101,8 @@
             debug: true,
             base: '/build'
         },
-        EVENT_NAME_TIMERS_EXECUTION = 'timers:asyncfunc';
+        EVENT_NAME_TIMERS_EXECUTION = 'timers:asyncfunc',
+        dragdrop;
 
     /**
      * Reference to the `idGenerator` function in [utils](../modules/utils.html)
@@ -113,7 +119,11 @@
     if (!fakedom) {
         require('event-dom/extra/hover.js')(window);
         require('event-dom/extra/valuechange.js')(window);
-        ITSA.merge(require('drag-drop')(window));
+        // setup dragdrop:
+        dragdrop = require('drag-drop')(window);
+        ITSA.DD = dragdrop.DD;
+        ITSA.Plugins.merge(dragdrop.Plugins);
+        ITSA.DD.init();
     }
 
     /**
