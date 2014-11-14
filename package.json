@@ -25,7 +25,7 @@
         "css": "itsa/css",
         "polyfill": "itsa/polyfill",
         "window-ext": "itsa/window-ext",
-        "dom-ext": "itsa/dom-ext",
+        "vdom": "itsa/vdom",
         "event":"itsa/event",
         "event-dom":"itsa/event-dom",
         "event-mobile":"itsa/event-mobile",
