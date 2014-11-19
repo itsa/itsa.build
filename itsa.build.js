@@ -112,7 +112,7 @@
      * @static
     */
 
-    ITSA.Plugins.merge(require('dom-ext')(window).Plugins);
+    ITSA.Plugins.merge(require('vdom')(window).Plugins);
 
     ITSA.merge(require('utils'));
     ITSA.RESERVED_WORDS = require('js-ext/extra/reserved-words.js');
