@@ -124,6 +124,7 @@
         dragdrop = require('drag-drop')(window);
         ITSA.DD = dragdrop.DD;
         ITSA.Plugins.merge(dragdrop.Plugins);
+        ITSA.Plugins.FocusManager = require('focusmanager')(window);
     }
 
     /**
