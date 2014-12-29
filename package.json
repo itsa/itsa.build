@@ -22,17 +22,19 @@
     ],
     "main": "itsa.build.js",
     "dependencies": {
+        "css": "itsa/css",
         "polyfill": "itsa/polyfill",
         "window-ext": "itsa/window-ext",
-        "dom-ext": "itsa/dom-ext",
+        "vdom": "itsa/vdom",
         "event":"itsa/event",
         "event-dom":"itsa/event-dom",
         "event-mobile":"itsa/event-mobile",
+        "drag-drop":"itsa/drag-drop",
         "utils": "itsa/utils",
         "js-ext": "itsa/js-ext",
+        "useragent": "itsa/useragent",
         "io": "itsa/io",
-		"node-win":"itsa/node-win",
-        "ypromise": "^0.2.3"
+		"node-win":"itsa/node-win"
     },
     "devDependencies": {
         "chai": "^1.9.1",

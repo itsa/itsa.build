@@ -84,11 +84,15 @@
         base: '/components'
     };
 
+    ITSA.Plugins = {
+
+    };
+
+
+    require('css');
     require('polyfill');
-    require('ypromise');
-    require('window-ext')(window);
-    require('dom-ext')(window);
     require('js-ext');
+    require('window-ext')(window);
 
     var fakedom = window.navigator.userAgent==='fake',
         Event = fakedom ? require('event') : require('event-mobile')(window),
@@ -97,13 +101,9 @@
             debug: true,
             base: '/build'
         },
-        EVENT_NAME_TIMERS_EXECUTION = 'timers:asyncfunc';
+        EVENT_NAME_TIMERS_EXECUTION = 'timers:asyncfunc',
+        dragdrop;
 
-    if (!fakedom) {
-        require('event-dom/extra/hover.js')(window);
-        require('event-dom/extra/valuechange.js')(window);
-        require('event-dom/extra/drag.js')(window);
-    }
     /**
      * Reference to the `idGenerator` function in [utils](../modules/utils.html)
      *
@@ -112,8 +112,19 @@
      * @static
     */
 
+    ITSA.Plugins.merge(require('vdom')(window).Plugins);
+
     ITSA.merge(require('utils'));
     ITSA.RESERVED_WORDS = require('js-ext/extra/reserved-words.js');
+
+    if (!fakedom) {
+        require('event-dom/extra/hover.js')(window);
+        require('event-dom/extra/valuechange.js')(window);
+        // setup dragdrop:
+        dragdrop = require('drag-drop')(window);
+        ITSA.DD = dragdrop.DD;
+        ITSA.Plugins.merge(dragdrop.Plugins);
+    }
 
     /**
      * Reference to the [IO](io.html) object
@@ -121,11 +132,19 @@
      * @type Object
      * @static
     */
-    ITSA.IO = require('io/io-transfer.js')(window);
+    ITSA.IO = require('io/extra/io-transfer.js')(window);
     ITSA.IO.config.merge(io_config);
-    require('io/io-cors-ie9.js')(window);
-    require('io/io-stream.js')(window);
-    require('io/io-xml.js')(window);
+    require('io/extra/io-cors-ie9.js')(window);
+    require('io/extra/io-stream.js')(window);
+    require('io/extra/io-xml.js')(window);
+
+    /**
+     * Reference to the [UserAgent](useragent.html) object
+     * @property UA
+     * @type Object
+     * @static
+    */
+    ITSA.UA = require('useragent')(window);
 
     /**
      * [Event](Event.html)-instance
