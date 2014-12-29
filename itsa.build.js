@@ -139,6 +139,14 @@
     require('io/extra/io-xml.js')(window);
 
     /**
+     * Reference to the [UserAgent](useragent.html) object
+     * @property UA
+     * @type Object
+     * @static
+    */
+    ITSA.UA = require('useragent')(window);
+
+    /**
      * [Event](Event.html)-instance
      * @property Event
      * @type Event
