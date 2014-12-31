@@ -32,6 +32,7 @@
         "drag-drop":"itsa/drag-drop",
         "utils": "itsa/utils",
         "js-ext": "itsa/js-ext",
+        "focusmanager": "itsa/focusmanager",
         "useragent": "itsa/useragent",
         "io": "itsa/io",
 		"node-win":"itsa/node-win"
