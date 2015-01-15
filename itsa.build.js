@@ -65,8 +65,11 @@
      * @param config {Object} Configuration options for the ITSA Library
      * @return self {Object}
     */
+
+    var jsExt = require('js-ext/js-ext.js'); // want the full version: include it at the top, so that object.merge is available
+
     var ITSA = function (config) {
-        ITSA._config.merge(config, true);
+        ITSA._config.merge(config, {force: true});
         return ITSA;
     };
     /**
@@ -88,10 +91,35 @@
 
     };
 
-
     require('css');
-    require('polyfill');
-    require('js-ext');
+    require('polyfill/polyfill.js'); // want the full version
+
+    /**
+     * Reference to `Classes` in [js-ext/extra/classes.js](../modules/js-ext.html)
+     *
+     * @property Classes
+     * @type Object
+     * @static
+    */
+
+    /**
+     * Reference to the `LightMap`-Class in [js-ext/extra/lightmap.js](../modules/js-ext.html)
+     *
+     * @property LightMap
+     * @type Class
+     * @static
+    */
+
+    /**
+     * Reference to the `createHashMap` function in [js-ext/extra/hashmap.js](../modules/js-ext.html)
+     *
+     * @property createHashMap
+     * @type function
+     * @static
+    */
+
+    // Note: we can only merge them after je-ext is required --> ITSA.merge is only then available
+    ITSA.merge(jsExt);
     require('window-ext')(window);
 
     var fakedom = window.navigator.userAgent==='fake',
@@ -101,7 +129,6 @@
             debug: true,
             base: '/build'
         },
-        EVENT_NAME_TIMERS_EXECUTION = 'timers:asyncfunc',
         dragdrop;
 
     /**
@@ -154,22 +181,6 @@
      * @static
     */
     ITSA.Event = Event;
-
-    // Now we setup `_afterAsyncFn` --> the `timers` module uses this:
-    // whenever `async() or `later() is called, it will invoke `_afterAsyncFn` if it is defined
-    // By define it in a way that an event is emitted, we make sure the vDOM will be re-rendered.
-    // this event cannot be prevented, halted or preventRendered --> if the user wants to prevent
-    // vDOM-rendering, the last argument of `async9)` or `later()` should be used.
-    ITSA.Event.defineEvent(EVENT_NAME_TIMERS_EXECUTION)
-              .unHaltable()
-              .unPreventable()
-              .unRenderPreventable()
-              .unSilencable();
-    ITSA._afterAsyncFn = function() {
-        console.log('[ITSA]: ', ' emitting '+EVENT_NAME_TIMERS_EXECUTION+' through ITSA._afterAsyncFn()');
-        // emittng a `dummy`-event which will re-render the dDOM:
-        ITSA.Event.emit(EVENT_NAME_TIMERS_EXECUTION);
-    };
 
     module.exports = ITSA;
 
