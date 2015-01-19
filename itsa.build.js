@@ -66,6 +66,9 @@
      * @return self {Object}
     */
 
+    require('css');
+    require('polyfill/polyfill.js'); // want the full version
+
     var jsExt = require('js-ext/js-ext.js'); // want the full version: include it at the top, so that object.merge is available
 
     var ITSA = function (config) {
@@ -90,9 +93,6 @@
     ITSA.Plugins = {
 
     };
-
-    require('css');
-    require('polyfill/polyfill.js'); // want the full version
 
     /**
      * Reference to `Classes` in [js-ext/extra/classes.js](../modules/js-ext.html)
