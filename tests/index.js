@@ -30,13 +30,5 @@ describe('Integration test, are they available where they should?', function () 
 	it('timers', function () {
 		expect(ITSA.later).be.a('function');
 	});
-	it('timers:asyncfunc emitted after async', function (done) {
-		ITSA.Event.after('timers:asyncfunc', function() {
-			done();
-		});
-		// calling async() should emit the event 'timers:asyncfunc',
-		// which is a `dummy`-event which will re-render the dDOM
-		ITSA.async(function() {});
-	});
 
 });
