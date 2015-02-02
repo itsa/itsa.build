@@ -147,6 +147,8 @@
     if (!fakedom) {
         require('event-dom/extra/hover.js')(window);
         require('event-dom/extra/valuechange.js')(window);
+        require('event-dom/extra/blurnode.js')(window);
+        require('event-dom/extra/focusnode.js')(window);
         // setup dragdrop:
         dragdrop = require('drag-drop')(window);
         ITSA.DD = dragdrop.DD;
