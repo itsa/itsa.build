@@ -131,6 +131,8 @@
         },
         dragdrop;
 
+    require('event/extra/objectobserve.js')(window);
+
     /**
      * Reference to the `idGenerator` function in [utils](../modules/utils.html)
      *
