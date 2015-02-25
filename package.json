@@ -39,6 +39,7 @@
         "focusmanager": "itsa/focusmanager",
         "useragent": "itsa/useragent",
         "io": "itsa/io",
+        "node-plugin": "node-plugin",
 		"node-win":"itsa/node-win"
     },
     "devDependencies": {
