@@ -40,7 +40,7 @@
         "useragent": "itsa/useragent",
         "io": "itsa/io",
         "node-plugin": "itsa/node-plugin",
-		"node-win":"itsa/node-win"
+		"node-win": "itsa/node-win"
     },
     "devDependencies": {
         "chai": "^1.9.1",
