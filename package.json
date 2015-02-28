@@ -32,6 +32,7 @@
         "event":"itsa/event",
         "event-dom":"itsa/event-dom",
         "event-mobile":"itsa/event-mobile",
+        "constrain":"itsa/constrain",
         "drag":"itsa/drag",
         "drag-drop":"itsa/drag-drop",
         "utils": "itsa/utils",
