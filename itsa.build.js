@@ -90,10 +90,6 @@
         base: '/components'
     };
 
-    ITSA.Plugins = {
-
-    };
-
     /**
      * Reference to `Classes` in [js-ext/extra/classes.js](../modules/js-ext.html)
      *
@@ -141,7 +137,8 @@
      * @type function
      * @static
     */
-    ITSA.Plugins.merge(require('node-plugin')(window));
+    require('node-plugin')(window);
+    require('constrain')(window);
 
     ITSA.merge(require('utils'));
     ITSA.RESERVED_WORDS = require('js-ext/extra/reserved-words.js');
@@ -153,10 +150,12 @@
         require('event-dom/extra/focusnode.js')(window);
         // setup dragdrop:
         dragdrop = require('drag-drop')(window);
-        ITSA.DD = dragdrop.DD;
-        ITSA.Plugins.merge(dragdrop.Plugins);
-        ITSA.Plugins.focusManager = require('focusmanager')(window);
+        ITSA.DD = dragdrop;
+        ITSA.DD.init();
+        require('focusmanager')(window);
     }
+
+    require('scrollable')(window);
 
     /**
      * Reference to the [IO](io.html) object

@@ -37,6 +37,7 @@
         "utils": "itsa/utils",
         "js-ext": "itsa/js-ext",
         "focusmanager": "itsa/focusmanager",
+        "scrollable": "itsa/scrollable",
         "useragent": "itsa/useragent",
         "io": "itsa/io",
         "node-plugin": "itsa/node-plugin",
