@@ -140,6 +140,7 @@
     require('node-plugin')(window);
     require('constrain')(window);
     require('panel')(window);
+    require('statusbar')(window);
 
     ITSA.merge(require('utils'));
     ITSA.RESERVED_WORDS = require('js-ext/extra/reserved-words.js');
@@ -156,6 +157,8 @@
         require('focusmanager')(window);
     }
 
+    ITSA.merge(require('messages'));
+    require('dialog')(window);
     require('scrollable')(window);
 
     /**
