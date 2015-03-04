@@ -43,7 +43,6 @@
         "scrollable": "itsa/scrollable",
         "messages": "itsa/messages",
         "dialog": "itsa/dialog",
-        "statusbar": "itsa/statusbar",
         "useragent": "itsa/useragent",
         "io": "itsa/io",
 		"node-win": "itsa/node-win"
