@@ -37,6 +37,7 @@
         "io": "itsa/io",
         "node-plugin": "itsa/node-plugin",
         "panel": "itsa/panel",
+        "messages": "itsa/messages",
         "constrain":"itsa/constrain",
         "drag":"itsa/drag",
         "drag-drop":"itsa/drag-drop",
