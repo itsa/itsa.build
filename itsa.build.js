@@ -157,7 +157,7 @@
     }
 
     ITSA.merge(require('messages'));
-    // require('dialog')(window);
+    require('dialog')(window);
     require('scrollable')(window);
 
     /**
