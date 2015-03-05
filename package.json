@@ -34,6 +34,7 @@
         "event":"itsa/event",
         "event-dom":"itsa/event-dom",
         "event-mobile":"itsa/event-mobile",
+        "io": "itsa/io",
         "node-plugin": "itsa/node-plugin",
         "panel": "itsa/panel",
         "constrain":"itsa/constrain",
@@ -44,7 +45,6 @@
         "messages": "itsa/messages",
         "dialog": "itsa/dialog",
         "useragent": "itsa/useragent",
-        "io": "itsa/io",
 		"node-win": "itsa/node-win"
     },
     "devDependencies": {
