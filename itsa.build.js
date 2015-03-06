@@ -127,7 +127,6 @@
         },
         dragdrop;
 
-    require('event/extra/objectobserve.js')(window);
     require('vdom')(window);
 
     /**
