@@ -136,6 +136,7 @@
         dragdrop;
 
     require('vdom')(window);
+    require('icons')(window);
 
     /**
      * Reference to the `idGenerator` function in [utils](../modules/utils.html)

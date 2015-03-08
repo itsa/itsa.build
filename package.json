@@ -35,6 +35,7 @@
         "event-dom":"itsa/event-dom",
         "event-mobile":"itsa/event-mobile",
         "io": "itsa/io",
+        "icons": "itsa/icons",
         "node-plugin": "itsa/node-plugin",
         "panel": "itsa/panel",
         "messages": "itsa/messages",
