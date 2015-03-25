@@ -45,6 +45,8 @@
         "drag-drop":"itsa/drag-drop",
         "focusmanager": "itsa/focusmanager",
         "scrollable": "itsa/scrollable",
+        "client-db": "itsa/client-db",
+        "client-storage": "itsa/client-storage",
         "useragent": "itsa/useragent",
 		"node-win": "itsa/node-win"
     },
