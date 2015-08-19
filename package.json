@@ -48,6 +48,7 @@
         "client-db": "itsa/client-db",
         "client-storage": "itsa/client-storage",
         "useragent": "itsa/useragent",
+        "uploader":"itsa/uploader",
 		"node-win": "itsa/node-win"
     },
     "devDependencies": {

@@ -188,6 +188,15 @@
     require('io/extra/io-xml.js')(window);
 
     /**
+     * Reference to the [Uploader](uploader.html) object
+     * @property Uploader
+     * @type Object
+     * @static
+    */
+
+    ITSA.Uploader = require('uploader')(window);
+
+    /**
      * Reference to the [UserAgent](useragent.html) object
      * @property UA
      * @type Object
