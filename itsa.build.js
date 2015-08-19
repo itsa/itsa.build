@@ -193,7 +193,7 @@
      * @type Object
      * @static
     */
-    ITSA.Uploader = require('uploader')(window);
+    // ITSA.Uploader = require('uploader')(window);
 
     /**
      * Reference to the [UserAgent](useragent.html) object
