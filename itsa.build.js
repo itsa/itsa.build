@@ -193,7 +193,6 @@
      * @type Object
      * @static
     */
-
     ITSA.Uploader = require('uploader')(window);
 
     /**
