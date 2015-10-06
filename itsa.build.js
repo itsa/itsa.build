@@ -180,11 +180,9 @@
      * @type Object
      * @static
     */
-    ITSA.IO = require('io/extra/io-transfer.js')(window);
+    ITSA.IO = require('io');
     ITSA.IO.config.merge(io_config);
     require('io/extra/io-cors-ie9.js')(window);
-    require('io/extra/io-stream.js')(window);
-    require('io/extra/io-filetransfer.js')(window);
     require('io/extra/io-xml.js')(window);
 
     /**
